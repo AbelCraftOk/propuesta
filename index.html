@@ -1,1 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propuesta: Aplicacion para Avisos</title>
+    <link rel="Icon" type="png" href="https://abelcraftok.github.io/propuesta/logo.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .text-mini {
+            font-size: 12px;
+            
+            font-weight: bold;
+            color: #000;    
+        }
+        .container {
+            flex: 1;
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+        }
+        .task-box {
+            border: 4px solid #6b6b6b;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 10px;
+            background-color: #f4f4f4;
+            text-align: left;
+        }
+        .recuadro {
+            border: 2px solid black;
+            background-color: #c3c3c3;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+            width: 300px; /* Puedes ajustar el tamaño */
+        }
+        .recuadro:focus {
+            outline: none;
+            border-color: #333;
+        }
 
+        .task-box h2 {
+            margin-bottom: 10px;
+        }
+        .separator {
+            border-top: 4px solid #6b6b6b;
+            margin: 10px 0;
+        }
+        .button {
+            padding: 10px;
+            margin: 5px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .principal { background-color: #6b6b6b; color: white; }
+        .home { background-color: red; color: white; }
+        .input-fecha {
+            padding: 10px;
+            width: 80%;
+            margin-bottom: 10px;
+            border: 1px solid #000;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .footer, .header {
+            background-color: #f8f9fa;
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+        }
+        .supe {
+            background-color: #f8f9fa;
+            padding: 10px;
+            width: 100%;
+            text-align: left;
+        }
+        .header img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Pie de página superior actualizado -->
+    <div id="1pie" class="footer">
+        <button class="button principal" onclick="mostrarPestaña('inicio')">INICIO</button><button class="button principal" onclick="mostrarPestaña('propuesta')">Propuesta</button><button class="button principal" onclick="mostrarPestaña('desarrollador')">Desarrollador</button>
+        <div class="separator"></div>
+    </div>
+
+    <!-- Pestaña: INICIO -->
+    <div id="inicio" class="container">
+        <img src="https://abelcraftok.github.io/propuesta/logo.png" width="190" height="190" alt="Logo">
+        <h1>Propuesta:</h1>
+        <h1>Aplicacion para Avisos</h1>
+        <div class="task-box">
+            <h2>INDICE:</h2>
+            <div class="separator"></div>
+            <h3>Propuesta:</h3>
+            <p>Esta propuesta trata de que el colegio cree una aplicacion donde los alumnos resivan notificaciones de asuntos importantes...</p>
+            <button class="button principal" onclick="mostrarPestaña('propuesta')">Leer mas sobre la propuesta</button>
+            <div class="separator"></div>
+            <h3>Mas sobre el desarrollador:</h3>
+            <p>Hola, yo soy Pedro Ojeda, alumno de 1ro 7ma y hice esta propuesta para el colegio porque entre mis compañeros del salon tuvimos problemas de informacion sobre si ese dia habia clases, entre otras...</p>
+            <button class="button principal" onclick="mostrarPestaña('desarrollador')">Leer mas sobre el desarrollador</button>
+        </div>
+    </div>
+
+    <!-- Pestaña: Propuesta -->
+    <div id="propuesta" class="container" style="display: none;">
+        <img src="https://abelcraftok.github.io/propuesta/logo.png" width="190" height="190" alt="Logo">
+        <h1>Propuesta</h1>
+        <div class="task-box">
+            <h2>Idea inicial</h2>
+            <div class="separator"></div>
+            <p>Esta propuesta trata de que el colegio cree una aplicacion donde los alumnos resivan notificaciones de asuntos importantes...</p>
+            <p>La idea surgio ya que con los compañeros  del salon tuvimos problemas de informacion sobre si ese dia habia clases, entre otras</p>
+            <p>Si se necesita a alguien para que pueda agregar las notificaciones y anuncios, yo me comprometo a mantener la aplicacion, aparte tengo experiencia en esto porque pude crear este sitio web para la propuesta completamente solo. Con esto solucionariamos el problema.</p>
+            <div class="separator"></div>
+            <h2>Funcionamiento</h2>
+            <div class="separator"></div>
+            <p>Si esta propuesta fue aceptada. Yo tenenia pensado hacer algo parecido a una aplicacion de ejemplo que hice...</p>
+            <button class="button principal" onclick="window.open('https://abelcraftok.github.io/propuesta/ejemplo.html')">Ver ejemplo</button>
+        </div>
+        <button class="button home" onclick="mostrarPestaña('inicio')">Ir al INICIO</button>
+    </div>
+
+    <!-- Pestaña: Desarrollador -->
+    <div id="desarrollador" class="container" style="display: none;">
+        <img src="https://abelcraftok.github.io/propuesta/logo.png" width="190" height="190" alt="Logo">
+        <h1>Desarrollador</h1>
+        <div class="task-box">
+            <h2>Sobre mi</h2>
+            <div class="separator"></div>
+            <p>Me llamo Pedro Ojeda, soy alumno de 1ro 7ma, tengo 12 años y el 6 de agosto cumplo los 13.</p>
+            <p>Hice esta propuesta porque entre mis compañeros del salon tuvimos problemas de informacion sobre si ese dia habia clases, entre otras...</p>
+        </div>
+        <button class="button home" onclick="mostrarPestaña('inicio')">Ir al INICIO</button>
+    </div>
+
+    <!-- Pie de página inferior actualizado -->
+    <div id="1pie" class="footer">
+        <div class="separator"></div>
+        <h3>Forma de contacto al creador:</h3>
+        <button class="button principal" onclick="window.open('https://wa.me/+542215989210')">Número de Teléfono</button>
+        <button class="button principal" onclick="window.open('mailto:pedrogabrielojeda664@gmail.com')">Correo Electrónico</button>
+        <p class="text-mini">Version: 0.1</p>
+    </div>
+
+    <script>
+        function mostrarPestaña(id) {
+            // Oculta todas las pestañas
+            document.querySelectorAll('.container').forEach(div => {
+                div.style.display = 'none';
+            });
+    
+            // Muestra la pestaña seleccionada
+            document.getElementById(id).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
