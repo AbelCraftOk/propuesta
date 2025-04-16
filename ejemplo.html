@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejemplo: Aplicacion para Avisos</title>
-    <link rel="Icon" type="png" href="https://abelcraftok.github.io/propuesta/logo.png">
+    <title>Avisos de 1ro</title>
+    <link rel="Icon" type="png" href="https://abelcraftok.github.io/propuesta/logo2.png">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -92,82 +92,73 @@
     </style>
 </head>
 <body>
-
-    <!-- Pie de página superior actualizado -->
-    <div id="1pie" class="footer">
-        <button class="button principal" onclick="mostrarPestaña('inicio')">Inicio</button><button class="button principal" onclick="mostrarPestaña('avisos')">Avisos</button><button class="button principal" onclick="mostrarPestaña('notificaciones')">Notificaciones</button><button class="button principal" onclick="window.open('https://abelcraftok.github.io/propuesta/')">Volver a la Propuesta</button>
-        <div class="separator"></div>
-    </div>
-
     <!-- Pestaña: INICIO -->
     <div id="inicio" class="container">
-        <img src="https://abelcraftok.github.io/propuesta/logo.png" width="190" height="190" alt="Logo">
-        <h1>Ejemplo: Aplicacion para Avisos</h1>
+        <img src="https://abelcraftok.github.io/propuesta/logo2.png" width="190" height="190" alt="Logo">
+        <h1>Avisos de 1ro</h1>
         <div class="task-box">
-            <h2>Avisos de hoy</h2>
+            <h2>Avisos de hoy...</h2>
             <div class="separator"></div>
-            <p>Por ahora hay 1 avisos</p>
+            <p>Por ahora hay 2 avisos</p>
+            <h3>TEMAS:</h3>
+            <h3>Espero que esta propuesta sea aceptada</h3>
+            <h3>Recordatorio de Leer las notificaciones de hoy</h3>
             <button class="button principal" onclick="mostrarPestaña('avisos')">Ver Avisos</button>
         </div>
         <div class="task-box">
             <h2>Notificaciones</h2>
             <div class="separator"></div>
-            <p>Por ahora hay 5 notificaciones</p>
+            <p>Por ahora hay 1 notificacion</p>
             <button class="button principal" onclick="notificaciones()">Ver Notificaciones</button>
         </div>
     </div>
 
     <!-- Pestaña: Avisos -->
     <div id="avisos" class="container" style="display: none;">
-        <img src="https://abelcraftok.github.io/propuesta/logo.png" width="190" height="190" alt="Logo">
+        <img src="https://abelcraftok.github.io/propuesta/logo2.png" width="190" height="190" alt="Logo">
         <h1>Avisos</h1>
+        <div class="task-box">
+            <h2>Espero que esta propuesta sea aceptada</h2>
+            <p>Por qué seria algo muy importante para nosotros los alumnos...</p>
+            <button class="button principal" onclick="mostrarPestaña('porque')">¿Porque?</button>
+        </div>
         <div class="task-box">
             <h2>Recuerda:</h2>
             <div class="separator"></div>
             <p>Recuerda leer tus notificaciones</p>
             <button class="button principal" onclick="notificaciones()">Ver Notificaciones</button>
         </div>
-        <button class="button home" onclick="mostrarPestaña('inicio')">Volver al inicio</button>
+    </div>
+    
+    <!-- Pestaña: Porque -->
+    <div id="porque" class="container" style="display: none;">
+        <img src="https://abelcraftok.github.io/propuesta/logo2.png" width="190" height="190" alt="Logo">
+        <h1>Porque...</h1>
+        <div class="task-box">
+            <p>Ya hay diferentes plataformas para avisar y notificar a los alumnos cualquier inconvenienete, el problema es que no todos los alumnos tienen acceso a eso...</p>
+            <h2>Instagram y el sitio web:</h2>
+            <p>No todos los alumnos cuentan con Instagram instalado y la mayoria de veces que el colegio no avisan...</p>
+            <p>Instagram y el sitio web oficial del colegio no siempre avisan. Por qué, los avisos del Instagram y del sitio web son para todos los cursos, de 1ro a 6to, y el sitio web que estoy proponiendo, solamente son avisos y notificaciones para los alumnos de 1ro.</p>
+            <div class="separator"></div>
+            <h2>¿Porque solo de 1ro y no de los demas grados?</h2>
+            <p>En el caso que esta propuesta se alla aceptado, la forma de actualizar las notificaciones seria entrar a un sitio web (https://github.com/AbelCraftOk/propuesta/edit/main/script.js) y agregar notificaciones o remplazar las anteriores. Eso podria ser dirijido por mi u otra persona que sepa sobre este campo.</p>
+            <div class="separator"></div>
+            <h2>El sitio web de mi propuesta:</h2>
+            <p>Si ustedes lo desean yo lo podria administrar y mantener al dia con los avisos y notificaciones de 1ro.</p>
+            <p><h3>Comó acceder al sitio web:</h3>Para agregar el sitio web a la pantalla de inicio para que figure como una app, el usuario ingresaria la URL del sitio web en su navegador de preferencia seria Google Chrome, luego tocaria los 3 puntitos de arriba a la derecha, desplazarse hasta encontrar la opcion: "Agregar a la pantalla de inicio", tocaria en esa opcion y agregar. Asi tendrian el sitio web en la pantalla de inicio como una app normal como WhatsApp o Instagram.</p>
+        </div>
     </div>
 
     <!-- Pie de página inferior actualizado -->
     <div id="1pie" class="footer">
+        <button class="button home" onclick="mostrarPestaña('inicio')">Volver al inicio</button>
         <div class="separator"></div>
         <h3>Forma de contacto al creador:</h3>
         <button class="button principal" onclick="window.open('https://wa.me/+542215989210')">Número de Teléfono</button>
         <button class="button principal" onclick="window.open('mailto:pedrogabrielojeda664@gmail.com')">Correo Electrónico</button>
-        <p class="text-mini">Version: 0.1</p>
+        <p class="text-mini">Version: 0.3</p>
     </div>
 
-    <script>
-        function mostrarPestaña(id) {
-            // Oculta todas las pestañas
-            document.querySelectorAll('.container').forEach(div => {
-                div.style.display = 'none';
-            });
-    
-            // Muestra la pestaña seleccionada
-            document.getElementById(id).style.display = 'block';
-        }
-
-        function notificaciones() {
-            alert("El dia 07/04/2025 no habran clases"
-                + "\nMotivo: Feriado Nacional"
-            );
-            alert("El dia 08/04/2025 no habran clases"
-                + "\nMotivo: Feriado Nacional"
-            );
-            alert("El dia 09/04/2025 no habran clases"
-                + "\nMotivo: Feriado Nacional"
-            );
-            alert("El dia 10/04/2025 no habran clases"
-                + "\nMotivo: Feriado Nacional"
-            );
-            alert("El dia 11/04/2025 no habran clases"
-                + "\nMotivo: Feriado Nacional"
-            );
-            alert("Recurda mirar los avisos");
-        }
-    </script>
+    <script src="https://abelcraftok.github.io/propuesta/script.js"></script>
 </body>
 </html>
